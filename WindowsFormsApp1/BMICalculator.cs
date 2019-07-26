@@ -52,6 +52,28 @@ namespace WindowsFormsApp1
                 ScaleResultTextBox.Text = "Select Unit";
                 ResultTextBox.Text = "";
             }
+            if (bmi < 18.5)
+            {
+                ScaleResultTextBox.Text = "Underweight";
+            }
+            else if (bmi >= 18.5 && bmi <= 24.9)
+            {
+                ScaleResultTextBox.Text = "Normal";
+            }
+            else if (bmi >= 25 && bmi <= 29.9)
+            {
+                ScaleResultTextBox.Text = "Overweight";
+            }
+            else if(bmi >= 30)
+            {
+                ScaleResultTextBox.Text = "Obese";
+               
+            }
+            else
+            {
+                ScaleResultTextBox.Text = "Error!";
+            }
+
 
             ResultTextBox.Text = bmi.ToString();
             

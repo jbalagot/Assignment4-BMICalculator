@@ -84,6 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 31);
@@ -93,6 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Silver;
             this.label2.Location = new System.Drawing.Point(3, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 31);
@@ -123,25 +125,27 @@
             // MetricRadioButton
             // 
             this.MetricRadioButton.AutoSize = true;
-            this.MetricRadioButton.Location = new System.Drawing.Point(152, 38);
+            this.MetricRadioButton.BackColor = System.Drawing.Color.Silver;
+            this.MetricRadioButton.Location = new System.Drawing.Point(141, 38);
             this.MetricRadioButton.Name = "MetricRadioButton";
             this.MetricRadioButton.Size = new System.Drawing.Size(106, 35);
             this.MetricRadioButton.TabIndex = 1;
             this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
-            this.MetricRadioButton.UseVisualStyleBackColor = true;
+            this.MetricRadioButton.UseVisualStyleBackColor = false;
             this.MetricRadioButton.Click += new System.EventHandler(this.UnitRadioButton_Click);
             // 
             // ImperialRadioButton
             // 
             this.ImperialRadioButton.AutoSize = true;
-            this.ImperialRadioButton.Location = new System.Drawing.Point(21, 38);
+            this.ImperialRadioButton.BackColor = System.Drawing.Color.Silver;
+            this.ImperialRadioButton.Location = new System.Drawing.Point(16, 38);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
             this.ImperialRadioButton.Size = new System.Drawing.Size(128, 35);
             this.ImperialRadioButton.TabIndex = 0;
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
-            this.ImperialRadioButton.UseVisualStyleBackColor = true;
+            this.ImperialRadioButton.UseVisualStyleBackColor = false;
             this.ImperialRadioButton.Click += new System.EventHandler(this.UnitRadioButton_Click);
             // 
             // ResultTextBox
@@ -154,6 +158,7 @@
             // 
             // CalculateBmiButton
             // 
+            this.CalculateBmiButton.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel1.SetColumnSpan(this.CalculateBmiButton, 3);
             this.CalculateBmiButton.Enabled = false;
             this.CalculateBmiButton.Location = new System.Drawing.Point(3, 275);
@@ -161,18 +166,19 @@
             this.CalculateBmiButton.Size = new System.Drawing.Size(258, 48);
             this.CalculateBmiButton.TabIndex = 6;
             this.CalculateBmiButton.Text = "Calculate BMI";
-            this.CalculateBmiButton.UseVisualStyleBackColor = true;
+            this.CalculateBmiButton.UseVisualStyleBackColor = false;
             this.CalculateBmiButton.Click += new System.EventHandler(this.CalculateBmiButton_Click);
             // 
             // ResetButton
             // 
+            this.ResetButton.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel1.SetColumnSpan(this.ResetButton, 2);
             this.ResetButton.Location = new System.Drawing.Point(163, 381);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(114, 40);
             this.ResetButton.TabIndex = 7;
             this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.UseVisualStyleBackColor = false;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // ScaleResultTextBox
@@ -187,6 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
