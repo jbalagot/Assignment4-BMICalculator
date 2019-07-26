@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private void BMICalculatorForm_Load(object send, EventArgs e)
+        private void BMICalculatorForm_Load(object sender, EventArgs e)
         {
             CalculateBmiButton.Enabled = false;
         }

@@ -25,6 +25,8 @@ namespace WindowsFormsApp1
         private void StartFormTimer_Tick(object sender, EventArgs e)
         {
             StartFormTimer.Enabled = false;
+            BMICalculatorForm b = new BMICalculatorForm();
+            b.Show();
             this.Hide();
         }
     }

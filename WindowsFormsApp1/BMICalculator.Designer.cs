@@ -130,7 +130,7 @@
             this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
-            this.MetricRadioButton.Click += new System.EventHandler(this.UnitRadioButton);
+            this.MetricRadioButton.Click += new System.EventHandler(this.UnitRadioButton_Click);
             // 
             // ImperialRadioButton
             // 
@@ -142,7 +142,7 @@
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
-            this.ImperialRadioButton.Click += new System.EventHandler(this.UnitRadioButton);
+            this.ImperialRadioButton.Click += new System.EventHandler(this.UnitRadioButton_Click);
             // 
             // ResultTextBox
             // 
@@ -155,6 +155,7 @@
             // CalculateBmiButton
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.CalculateBmiButton, 3);
+            this.CalculateBmiButton.Enabled = false;
             this.CalculateBmiButton.Location = new System.Drawing.Point(3, 275);
             this.CalculateBmiButton.Name = "CalculateBmiButton";
             this.CalculateBmiButton.Size = new System.Drawing.Size(258, 48);
@@ -195,6 +196,7 @@
             this.Name = "BMICalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculatorForm_FormCLosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
