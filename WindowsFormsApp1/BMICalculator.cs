@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 // Author's Name: Jeannery Mae Balagot
 // Student number: 301051646
+//github link: https://github.com/jbalagot/Assignment4-BMICalculator.git
 
 namespace WindowsFormsApp1
 {
