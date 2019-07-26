@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class BMICalculatorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.HeightTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
             this.MetricRadioButton = new System.Windows.Forms.RadioButton();
+            this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.CalculateBmiButton = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
@@ -72,7 +72,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 424);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // HeightTextBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.HeightTextBox, 2);
+            this.HeightTextBox.Location = new System.Drawing.Point(163, 3);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.Size = new System.Drawing.Size(103, 38);
+            this.HeightTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -82,14 +89,6 @@
             this.label1.Size = new System.Drawing.Size(144, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "My Height:";
-            // 
-            // HeightTextBox
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.HeightTextBox, 2);
-            this.HeightTextBox.Location = new System.Drawing.Point(163, 3);
-            this.HeightTextBox.Name = "HeightTextBox";
-            this.HeightTextBox.Size = new System.Drawing.Size(103, 38);
-            this.HeightTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -121,17 +120,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Units";
             // 
-            // ImperialRadioButton
-            // 
-            this.ImperialRadioButton.AutoSize = true;
-            this.ImperialRadioButton.Location = new System.Drawing.Point(18, 38);
-            this.ImperialRadioButton.Name = "ImperialRadioButton";
-            this.ImperialRadioButton.Size = new System.Drawing.Size(128, 35);
-            this.ImperialRadioButton.TabIndex = 0;
-            this.ImperialRadioButton.TabStop = true;
-            this.ImperialRadioButton.Text = "Imperial";
-            this.ImperialRadioButton.UseVisualStyleBackColor = true;
-            // 
             // MetricRadioButton
             // 
             this.MetricRadioButton.AutoSize = true;
@@ -142,6 +130,19 @@
             this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
+            this.MetricRadioButton.Click += new System.EventHandler(this.UnitRadioButton);
+            // 
+            // ImperialRadioButton
+            // 
+            this.ImperialRadioButton.AutoSize = true;
+            this.ImperialRadioButton.Location = new System.Drawing.Point(21, 38);
+            this.ImperialRadioButton.Name = "ImperialRadioButton";
+            this.ImperialRadioButton.Size = new System.Drawing.Size(128, 35);
+            this.ImperialRadioButton.TabIndex = 0;
+            this.ImperialRadioButton.TabStop = true;
+            this.ImperialRadioButton.Text = "Imperial";
+            this.ImperialRadioButton.UseVisualStyleBackColor = true;
+            this.ImperialRadioButton.Click += new System.EventHandler(this.UnitRadioButton);
             // 
             // ResultTextBox
             // 
@@ -160,6 +161,7 @@
             this.CalculateBmiButton.TabIndex = 6;
             this.CalculateBmiButton.Text = "Calculate BMI";
             this.CalculateBmiButton.UseVisualStyleBackColor = true;
+            this.CalculateBmiButton.Click += new System.EventHandler(this.CalculateBmiButton_Click);
             // 
             // ResetButton
             // 
@@ -170,6 +172,7 @@
             this.ResetButton.TabIndex = 7;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // ScaleResultTextBox
             // 
@@ -179,7 +182,7 @@
             this.ScaleResultTextBox.Size = new System.Drawing.Size(258, 38);
             this.ScaleResultTextBox.TabIndex = 8;
             // 
-            // Form1
+            // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,10 +192,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "BMICalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "BMI Calculator";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
