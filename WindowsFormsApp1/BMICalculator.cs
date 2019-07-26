@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Author's Name: Jeannery Mae Balagot
+// Student number: 301051646
+
 namespace WindowsFormsApp1
 {
     public partial class BMICalculatorForm : Form
@@ -16,11 +19,20 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// At the load event, this will disabled the calculate BMI button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BMICalculatorForm_Load(object sender, EventArgs e)
         {
             CalculateBmiButton.Enabled = false;
         }
-       
+        /// <summary>
+        /// This event handler will calculate the values given at the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>        
         private void CalculateBmiButton_Click(object sender, EventArgs e)
         {
             double height = Convert.ToDouble(HeightTextBox.Text);
@@ -44,14 +56,29 @@ namespace WindowsFormsApp1
             ResultTextBox.Text = bmi.ToString();
             
         }
+        /// <summary>
+        /// This event handler will enable the CalculateBMI button once one of the unitradio button is clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UnitRadioButton_Click(object sender, EventArgs e)
         {
             CalculateBmiButton.Enabled = true;
         }
+        /// <summary>
+        /// This event handler will close the form once you click the exit button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BMICalculatorForm_FormCLosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+        /// <summary>
+        /// This Event handler will Empty the form when clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ResetButton_Click(object sender, EventArgs e)
         {
             HeightTextBox.Text = String.Empty;
